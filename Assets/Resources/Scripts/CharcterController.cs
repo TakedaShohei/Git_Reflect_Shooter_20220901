@@ -20,7 +20,8 @@ public class CharcterController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-
+            speed_ = 100;
+            this.rigdbody_.AddForce(transform.up * speed_);
         }
 
     }
