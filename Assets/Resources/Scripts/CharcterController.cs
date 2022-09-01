@@ -6,13 +6,27 @@ public class CharcterController : MonoBehaviour
 {
     // Start is called before the first frame update
 
+
+    //parameter
+    int hp_;
+    int max_hp_;
+    float max_speed_;
+    private float speed_;
+
+    //set bounce
     GameObject character_;
     Rigidbody2D rigdbody_;
     Vector2 start_pos_;
-    private float speed_ = 200;
+
+    //CharacterData
+    [SerializeField]
+    CharacterData data_ = null;
 
     [SerializeField]
     Vector2 launch_direction = new Vector2();
+
+    [SerializeField]
+    SpriteRenderer render_ = null;
 
     void Start()
     {
@@ -37,6 +51,11 @@ public class CharcterController : MonoBehaviour
 
     void Setup()
     {
+        //setup character data
+
+
+
+
         character_ = this.gameObject;
         this.rigdbody_ = GetComponent<Rigidbody2D>();
         speed_ = 0;
@@ -45,5 +64,15 @@ public class CharcterController : MonoBehaviour
     void Launch()
     {
         rigdbody_.velocity = launch_direction;
+    }
+
+    public void CharacterSetup(CharacterData in_data)
+    {
+
+        hp_ = in_data.Hp;
+        max_hp_ = in_data.Hp;
+        max_speed_ = in_data.Speed;
+        speed_ = max_speed_;
+        render_.sprite = in_data.Image;
     }
 }
