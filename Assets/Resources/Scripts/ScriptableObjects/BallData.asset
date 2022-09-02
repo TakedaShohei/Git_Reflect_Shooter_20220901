@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db33d2dce06cbb448b10e84e8bc4d58, type: 3}
   m_Name: BallData
   m_EditorClassIdentifier: 
-  Hp: 0
-  Speed: 0
-  Image: {fileID: 0}
+  Hp: 50
+  Speed: 200
+  Image: {fileID: 21300000, guid: 0368cbdd3d88fcd468887a7d9a07fe9b, type: 3}
+  Group:
+    shot_type_: 0
