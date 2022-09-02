@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Assets.Resources.Scripts { 
 public class CharcterController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -52,7 +53,7 @@ public class CharcterController : MonoBehaviour
     void Setup()
     {
         //setup character data
-
+        CharacterSetup(data_);
 
 
 
@@ -75,4 +76,5 @@ public class CharcterController : MonoBehaviour
         speed_ = max_speed_;
         render_.sprite = in_data.Image;
     }
+}
 }

@@ -14,4 +14,17 @@ namespace Assets.Resources.Scripts
         reflect,
         penetrate
     }
+
+    public enum GIMMICK
+    {
+
+    }
+
+    public enum SIZE
+    {
+        none,
+        S,
+        M,
+        L
+    }
 }
